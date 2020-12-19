@@ -1,6 +1,6 @@
 class SessinosController < ApplicationController
-  skip_before_action :login_required
-  
+
+
   def new
   end
 
@@ -14,11 +14,11 @@ class SessinosController < ApplicationController
       render 'new'
     end
   end
-  
+
   def destroy
     reset_session
     redirect_to root_url, notice: 'ログアウトしました。'
-  end  
+  end
 
   private
 
